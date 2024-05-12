@@ -1,34 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <title>Frontend Mentor | Blog preview card by Vi Almeida</title>
 
-  Learning
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Figtree", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-  Published 21 Dec 2023
+      :root {
+        --yellow: hsl(47,88%,63%);
+        --white: hsl(0,0%,100%);
+        --grey: hsl(0,0%,50%);
+        --black: hsl(0,0%,7%);
+      }
+    </style>
 
-  HTML & CSS foundations
+  </head>
+  <body>
+    <main>
+      <div class="blog_preview_card">
+        <div class="blog_preview_img">
+          <img src="./assets/images/illustration-article.svg">
+        </div>
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+        <div class="blog_preview_text">
+          <div class="article_tag">
+            <p>Learning</p>
+          </div>
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="article_date">
+            <p>Published 21 Dec 2023</p>
+          </div>  
+
+          <div class="article_title">
+            <h1>HTML & CSS foundations</h1>
+          </div>
+
+          <div class="article_description">
+            <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+          </div>
+
+        </div>
+
+        <div class="blog_preview_author">
+          <img src="./assets/images/image-avatar.webp">
+          
+          <p>Greg Hooper</p>
+        </div>
+      </div>
+    </main>
+
+    <style>
+      main {
+        height: 100vh;
+        background-color: var(--yellow);
+
+        display: flex;
+        /*Specifying flex-direction may be unnecessary, but I'm adding it just in case*/
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+      }
+
+      .blog_preview_card{
+        background-color: var(--white);
+        width:100%;
+        max-width: 384px;
+
+        padding:24px;
+        border-radius: 20px;
+        border: 1px solid var(--black);
+        box-shadow: 8px 8px 0px 0 var(--black);
+
+        margin: 0 auto;
+      }
+
+      .blog_preview_img{
+        height: 100%;
+        max-height: 200px;
+        width: auto;
+      }
+
+      .blog_preview_img img{
+        border-radius: 10px; 
+      }
+
+      .blog_preview_text{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        margin: 24px 0px 24px 0px;
+      }
+
+      .article_tag p{
+        background-color: var(--yellow);
+        max-width: fit-content;
+        padding: 4px 12px;
+        border-radius: 4px;
+
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--black);
+      }
+
+      .article_date p{
+        max-width: fit-content;
+
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--black);
+      }
+
+      .article_title h1{
+        max-width: fit-content;
+
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.5;
+        color: var(--black);
+      }
+
+      .article_description p {
+        max-width: fit-content;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--grey);
+      }
+
+      .blog_preview_author{
+        max-width: fit-content;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+      }
+
+      .blog_preview_author img{
+        height: 32px;
+      }
+
+      .blog_preview_author p{
+        align-self: center;
+
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.5;
+        color: var(--black);
+      }
+
+    </style>
+
+
+  </body>
 </html>
